@@ -37,7 +37,7 @@ function App() {
   }, []);
   return( 
   <div>
-    <Navbar color="success" height={50}>
+    <Navbar color="success" style={{padding: 15}}>
         <Navbar.Brand>
           <Navbar.Item href="https://travel-bootcamp.firebaseapp.com/">
             <Title style={{color: "white"}}>GroupFund</Title>
@@ -47,12 +47,23 @@ function App() {
         <Navbar.Menu>
           <Navbar.Segment align="start">
             <Navbar.Item href="https://travel-bootcamp.firebaseapp.com/">Itinerary</Navbar.Item>
-            <Navbar.Item href="https://travel-bootcamp.firebaseapp.com/">Upcoming Trips</Navbar.Item>
+            <Navbar.Item href="https://travel-bootcamp.firebaseapp.com/">Trip Budget</Navbar.Item>
             <Navbar.Item dropdown hoverable>
               <Navbar.Link href="https://travel-bootcamp.firebaseapp.com/">
                 Suggestions
               </Navbar.Link>
+
+              <Navbar.Dropdown boxed>
+          <Navbar.Item active> Vote on Friends' Suggestions </Navbar.Item>
+          <Navbar.Divider />
+          <Navbar.Item> Browse </Navbar.Item>
+          <Navbar.Item> Upcoming Events </Navbar.Item>
+          <Navbar.Item> Hot Spots </Navbar.Item>
+        </Navbar.Dropdown>
+
+
             </Navbar.Item>
+            <Navbar.Item href="https://travel-bootcamp.firebaseapp.com/">Upcoming Trips</Navbar.Item>
           </Navbar.Segment>
 
           <Navbar.Segment align="end">
@@ -69,8 +80,7 @@ function App() {
         </Navbar.Menu>
       </Navbar>
 
-      <Title textAlign="centered"></Title>
-      <Title textAlign="centered">Chicago Trip</Title>
+      <Title textAlign="centered" style={{marginTop: 35}}>Chicago Trip</Title>
       <Title subtitle textAlign="centered">Jan 15-Jan 30</Title>
 
       <Title textAlign="left" style={{marginLeft: 50}}>Daily Itinerary:</Title>
@@ -80,6 +90,8 @@ function App() {
         {!possibleEvents ? "Loading events..." : 
         possibleEvents.map(event => <Event key={event.address_line1} iconImage={event.icon_id} name={event.name} votes={event.num_votes}></Event>)}
       </Column.Group>
+
+      <Title textAlign="left" style={{marginLeft: 50, marginTop: 15}}>Lunch:</Title>
   </div>
   )
 };
@@ -90,10 +102,12 @@ const Event = ({iconImage, name, votes}) => {
     <Column size={5} style={{marginLeft: 50}}>
       <Card>
         <Card.Header>
-          <Icon style={{padding: 25}}>star</Icon>
-          <h4 style={{padding: 25}}>{name}</h4> <Button style={{marginLeft: 25, marginRight: 25, marginTop: 20}}  
-          color="success">Upvote!</Button> <h4 style={{marginTop: 25}}>Current Votes: {votes}</h4> 
-          </Card.Header>
+          <Icon style={{marginLeft:25, marginTop: 20, fontSize:33}}>star</Icon>
+          <h4 style={{padding: 25}}>{name}</h4> 
+          <Button style={{marginLeft: 25, marginRight: 25, marginTop: 20}}  
+              color="success">Upvote!</Button> 
+          <h4 style={{marginTop: 25}}>Current Votes: {votes}</h4> 
+        </Card.Header>
       </Card>
     </Column>
   )
