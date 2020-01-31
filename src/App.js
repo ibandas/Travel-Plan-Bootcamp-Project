@@ -75,6 +75,7 @@ function App() {
 
       <Title textAlign="left" style={{marginLeft: 50}}>Daily Itinerary:</Title>
       <Title subtitle style={{marginLeft: 50}}> Jan 17 </Title>
+      <Title textAlign="left" style={{marginLeft: 50, marginTop: 15}}>Morning Activities:</Title>
       <Column.Group multiline={true}>
         {!possibleEvents ? "Loading events..." : 
         possibleEvents.map(event => <Event key={event.address_line1} iconImage={event.icon_id} name={event.name} votes={event.num_votes}></Event>)}
@@ -86,11 +87,12 @@ function App() {
 //TODO: provide options for custom icons (i.e get material-ui icons imports going)
 const Event = ({iconImage, name, votes}) => {
   return (
-    <Column size={12}>
+    <Column size={5} style={{marginLeft: 50}}>
       <Card>
         <Card.Header>
-          <Icon>star</Icon>
-          {name} <Button style={{marginLeft: 25, marginRight: 25}}>Upvote!</Button> Current Votes: {votes}
+          <Icon style={{padding: 25}}>star</Icon>
+          <h4 style={{padding: 25}}>{name}</h4> <Button style={{marginLeft: 25, marginRight: 25, marginTop: 20}}  
+          color="success">Upvote!</Button> <h4 style={{marginTop: 25}}>Current Votes: {votes}</h4> 
           </Card.Header>
       </Card>
     </Column>
