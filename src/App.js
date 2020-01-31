@@ -23,6 +23,16 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database().ref();
 
 function App() {
+  const [data, setData] = useState({});
+  const possibleEvents = Object.values(data);
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const response = await fetch('/data/test1.json');
+      const json = await response.json();
+      setData(json);
+    };
+    fetchEvents();
+  }, []);
   return( 
   <div>
     <Navbar color="success" height={50}>
@@ -63,7 +73,22 @@ function App() {
 
       <Title textAlign="left" style={{marginLeft: 50}}>Daily Itinerary:</Title>
       <Title subtitle style={{marginLeft: 50}}> Jan 17 </Title>
+      <Column.Group multiline={true}>
+        {!possibleEvents ? "Loading events..." : 
+        possibleEvents.map(event => <Event key={event.address_line1} icon={event.icon_id} name={event.name} votes={event.num_votes}></Event>)}
+      </Column.Group>
   </div>
   )
 };
+
+const Event = ({icon, name, votes}) => {
+  return (
+    <Column size={12}>
+    <Card>
+  <Card.Header>{name} <Button>Upvote!</Button> Current Count: {votes}</Card.Header>
+    </Card>
+    </Column>
+  )
+};
+
 export default App;

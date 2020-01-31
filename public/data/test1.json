@@ -1,0 +1,98 @@
+[
+    {
+      "icon_id": "gesture",
+      "name": "Walk the 606 trail",
+      "num_votes": 3,
+      "category": "morning",
+      "address_line1": "1800 N Ridgeway Ave",
+      "state": "IL",
+      "zipcode": 60647,
+      "start_time": "6:00",
+      "end_time": "16:00",
+      "description": "Should be a pretty easy hike! Don't need to be too fit for this one."
+    },
+    {
+      "icon_id": "spa",
+      "name": "Morning Yoga",
+      "num_votes": 2,
+      "category": "morning",
+      "address_line1": "141 W Jackson Blvd #750",
+      "state": "IL",
+      "zipcode": 60604,
+      "start_time": "7:00",
+      "end_time": "8:00",
+      "description": "Stretch out those tired legs with some yoga on the patio before we head out for the day"
+    },
+    {
+      "icon_id": "directions_walk",
+      "name": "Architecture tour",
+      "num_votes": 0,
+      "category": "morning",
+      "address_line1": "111 E Wacker Dr",
+      "state": "IL",
+      "zipcode": 60601,
+      "start_time": "9:30",
+      "end_time": "12:00",
+      "description": "See the city's most notable buildings all in just a coupleof hours!"
+    },
+    {
+      "icon_id": "directions_boat",
+      "name": "Wendella Boat tour",
+      "num_votes": 4,
+      "category": "afternoon",
+      "address_line1": "400 N Michigan Ave",
+      "state": "IL",
+      "zipcode": 60611,
+      "start_time": "13:30",
+      "end_time": "17:00",
+      "description": "Boat day best day! Lets's spend some time on the water to cool off."
+    },
+    {
+      "icon_id": "restaurant",
+      "name": "Secret Food Tours",
+      "num_votes": 1,
+      "category": "afternoon",
+      "address_line1": "521 S Dearborn Street.",
+      "state": "IL",
+      "zipcode": 60605,
+      "start_time": "16:00",
+      "end_time": "20:00",
+      "description": "Can't decide what to eat? Eat it all at once! This is a professional tour with a knowledgeable local guide."
+    },
+    {
+      "icon_id": "museum",
+      "name": "Field Museum",
+      "num_votes": 0,
+      "category": "afternoon",
+      "address_line1": "1400 S Lake Shore Dr",
+      "state": "IL",
+      "zipcode": 60605,
+      "start_time": "14:00",
+      "end_time": "16:00",
+      "description": "We need to get some history on this trip. Otherwise what will we tell our parents we did when we get home?"
+    },
+    {
+      "icon_id": "local_pizza",
+      "name": "Lou Malnati's pizzeria",
+      "num_votes": 2,
+      "category": "lunch",
+      "address_line1": "439 N Wells St",
+      "state": "IL",
+      "zipcode": 60654,
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "description": "Pizza is always a good idea."
+    },
+    {
+      "icon_id": "fastfood",
+      "name": "Au Cheval",
+      "num_votes": 2,
+      "category": "lunch",
+      "address_line1": "800 W Randolph St",
+      "state": "IL",
+      "zipcode": 60607,
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "description": "Apparently these are the best burgers ever! We should go at lunch so we don't have to wait as long"
+    }
+  ]
