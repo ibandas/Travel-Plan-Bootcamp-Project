@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from "react-dom";
 import "rbx/index.css";
 import { Card, Title, Content, Footer, Image, Column, Group, Button, Navbar, Item, Brand, Burger, Linl, Dropdown, Divider,
-Segment, Field, Control, Menu, Icon, Container, Select, Option} from "rbx";
-
+Segment, Field, Control, Menu, Container, Select, Option} from "rbx";
+//import { AccessAlarm, ThreeDRotation, spa, gesture, directions_walk, directions_boat, restaurant,
+//  museum, local_pizza, fastfood } from '@material-ui/icons';
+import Icon from '@material-ui/core/Icon';
 import logo from './logo.svg';
 import './App.css';
 import firebase from 'firebase/app';
@@ -75,18 +77,22 @@ function App() {
       <Title subtitle style={{marginLeft: 50}}> Jan 17 </Title>
       <Column.Group multiline={true}>
         {!possibleEvents ? "Loading events..." : 
-        possibleEvents.map(event => <Event key={event.address_line1} icon={event.icon_id} name={event.name} votes={event.num_votes}></Event>)}
+        possibleEvents.map(event => <Event key={event.address_line1} iconImage={event.icon_id} name={event.name} votes={event.num_votes}></Event>)}
       </Column.Group>
   </div>
   )
 };
 
-const Event = ({icon, name, votes}) => {
+//TODO: provide options for custom icons (i.e get material-ui icons imports going)
+const Event = ({iconImage, name, votes}) => {
   return (
     <Column size={12}>
-    <Card>
-  <Card.Header>{name} <Button>Upvote!</Button> Current Count: {votes}</Card.Header>
-    </Card>
+      <Card>
+        <Card.Header>
+          <Icon>star</Icon>
+          {name} <Button style={{marginLeft: 25, marginRight: 25}}>Upvote!</Button> Current Votes: {votes}
+          </Card.Header>
+      </Card>
     </Column>
   )
 };
