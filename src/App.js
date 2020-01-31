@@ -1,8 +1,29 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import ReactDOM from "react-dom";
 import "rbx/index.css";
 import { Card, Title, Content, Footer, Image, Column, Group, Button, Navbar, Item, Brand, Burger, Linl, Dropdown, Divider,
 Segment, Field, Control, Menu, Icon, Container, Select, Option} from "rbx";
+=======
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import firebase from 'firebase/app';
+import 'firebase/database';
+import 'firebase/auth';
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDVtdJ4ht4S_B8GS1z-xi7x8Hizip5GHW8",
+  authDomain: "travel-bootcamp.firebaseapp.com",
+  databaseURL: "https://travel-bootcamp.firebaseio.com",
+  projectId: "travel-bootcamp",
+  storageBucket: "travel-bootcamp.appspot.com",
+  messagingSenderId: "68718694979",
+  appId: "1:68718694979:web:14ee7aeae3acd8ebdefaf6"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database().ref();
+>>>>>>> 9707417d62f45d842872342ca6051af794ae372a
 
 function App() {
   return( 
