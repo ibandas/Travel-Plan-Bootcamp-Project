@@ -6,15 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-<<<<<<< HEAD
-    "rbx": "^2.2.0",
-=======
     "bootstrap": "^4.4.1",
-<<<<<<< HEAD
     "firebase": "^7.8.0",
-=======
->>>>>>> 9707417d62f45d842872342ca6051af794ae372a
->>>>>>> 7f5e391fa473a386152bd95702f8679373012667
+    "rbx": "^2.2.0",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
